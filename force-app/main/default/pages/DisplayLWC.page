@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : AS | NuAge Experts
+  @group             : 
+  @last modified on  : 03-27-2022
+  @last modified by  : AS | NuAge Experts
+-->
+<apex:page showHeader="false" sidebar="false">
+    <apex:includeLightning />    
+    <div id="LightningComponentid" />    
+    <script>
+    $Lightning.use("c:LightningComponentApp", function() {
+        $Lightning.createComponent("c:lightningWebComp",
+          { 
+          },
+          "LightningComponentid",
+          function(cmp) {
+             console.log('LWC Componenet added in VF page');
+          });
+    });
+    </script>
+</apex:page>
